@@ -113,7 +113,7 @@ The dataset covers 2023 to 2025 and includes:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/douglaspiangers/sales-dashboard-powerbi.git
+   git clone https://github.com/douglaspiangers/Sales-Dashboard-PowerBI-Additive-Company.git
    ```
 2. Open `salesdashboard.pbix` in **Power BI Desktop**
 3. If needed, update the data source path to point to `data/Sales_2023_2025.xlsx`
