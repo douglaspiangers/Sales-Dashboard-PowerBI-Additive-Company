@@ -1,6 +1,6 @@
-# Sales Dashboard — Aditivos & Lubrificantes
+# Sales Dashboard — Additives & Lubricants
 
-Dashboard de vendas desenvolvido no **Power BI** para uma empresa nacional do setor de aditivos e lubrificantes, cobrindo o período de **2023 a 2025**.
+An interactive sales dashboard built with **Power BI** for a Brazilian company in the additives and lubricants sector, covering **2023 to 2025**.
 
 ---
 
@@ -8,119 +8,119 @@ Dashboard de vendas desenvolvido no **Power BI** para uma empresa nacional do se
 
 [![Sales Dashboard Preview](assets/screenshots/dashboard_preview.png)](https://app.powerbi.com/view?r=eyJrIjoiNDFiN2RjNzgtNzllYi00MTBiLWE5ZDktOWU2YzU2M2QzMjc0IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
 
-> **[Acessar o Dashboard Publicado](https://app.powerbi.com/view?r=eyJrIjoiNDFiN2RjNzgtNzllYi00MTBiLWE5ZDktOWU2YzU2M2QzMjc0IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)**
+> **[Access the Published Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNDFiN2RjNzgtNzllYi00MTBiLWE5ZDktOWU2YzU2M2QzMjc0IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)**
 
 ---
 
-## Sobre o Projeto
+## About
 
-Este projeto transforma uma planilha de vendas bruta em um dashboard analítico interativo. O objetivo é fornecer visibilidade sobre o desempenho comercial da empresa, com navegação intuitiva, drill-through para detalhamento e uma identidade visual personalizada.
-
----
-
-## Stack & Ferramentas
-
-| Ferramenta     | Uso                                      |
-|----------------|------------------------------------------|
-| Power BI Desktop | Modelagem, DAX, visualizações e design |
-| Microsoft Excel  | Fonte de dados bruta (Sales_2023_2025) |
-| Power Query      | ETL e transformação dos dados           |
+This project transforms a raw sales spreadsheet into an interactive analytical dashboard. The goal is to provide visibility into the company's commercial performance, with intuitive navigation, drill-through for detailed analysis, and a custom visual identity.
 
 ---
 
-## Estrutura do Repositório
+## Tech Stack
+
+| Tool              | Purpose                                       |
+|-------------------|-----------------------------------------------|
+| Power BI Desktop  | Data modeling, DAX measures, visuals, design  |
+| Microsoft Excel   | Raw data source (Sales_2023_2025)             |
+| Power Query       | ETL and data transformation                   |
+
+---
+
+## Repository Structure
 
 ```
 sales-dashboard-powerbi/
-├── dados/
-│   └── Sales_2023_2025.xlsx      # Planilha de dados brutos
+├── data/
+│   └── Sales_2023_2025.xlsx       # Raw sales data
 ├── assets/
-│   └── screenshots/              # Capturas de tela do dashboard
-├── salesdashboard.pbix           # Arquivo Power BI Desktop
+│   └── screenshots/               # Dashboard screenshots
+├── salesdashboard.pbix            # Power BI Desktop file
 └── README.md
 ```
 
 ---
 
-## Processo de Desenvolvimento
+## Development Process
 
-### 1. Importação dos Dados
-- Dados importados diretamente do **Microsoft Excel** (`dados/Sales_2023_2025.xlsx`)
-- Conexão via Power Query Editor para carregamento e transformação inicial
+### Step 1 — Data Import
+- Data imported from **Microsoft Excel** (`data/Sales_2023_2025.xlsx`)
+- Connected via Power Query Editor for initial load and transformation
 
-### 2. Primeiros Gráficos e Objetos Visuais
-- Criação dos primeiros visuais exploratórios para entender a distribuição dos dados
-- Identificação das principais métricas de negócio: faturamento, volume, clientes
+### Step 2 — First Charts and Visuals
+- Created initial exploratory visuals to understand data distribution
+- Identified key business metrics: revenue, volume, and customers
 
-### 3. Tratamento e Tipagem dos Dados
-- Correção dos tipos de dados: campos de texto incorretamente classificados como número e vice-versa
-- Padronização de cabeçalhos e nomes de colunas
-- Limpeza de valores nulos e inconsistências na fonte
+### Step 3 — Data Types & Headers Cleanup
+- Fixed incorrect data types: text fields misclassified as numbers and vice versa
+- Standardized column headers and naming conventions
+- Cleaned null values and source inconsistencies
 
-### 4. Design Personalizado
-- Criação de um tema visual customizado alinhado à identidade da empresa
-- Paleta de cores definida, fontes padronizadas e layout organizado por hierarquia de informação
+### Step 4 — Custom Design
+- Created a custom visual theme aligned with the company's identity
+- Defined color palette, standardized fonts, and layout organized by information hierarchy
 
-### 5. Medidas DAX e Organização
-- Criação de medidas DAX para KPIs principais (faturamento, ticket médio, variação YoY, etc.)
-- Organização das medidas em uma **tabela de medidas dedicada** (`_Measures`) separada das tabelas de dados
-- Essa estrutura evita medidas implícitas e permite reutilização em outros relatórios
+### Step 5 — DAX Measures & Organization
+- Built DAX measures for main KPIs (revenue, average ticket, YoY variance, etc.)
+- Organized all measures in a dedicated **measures table** (`_Measures`), separate from data tables
+- This structure avoids implicit measures and enables reuse across other reports
 
-### 6. Tabela de Medidas
-- Criação de uma tabela de medidas central para organização e governança das métricas DAX
-- Medidas agrupadas por categoria (Vendas, Clientes, Comparativos)
+### Step 6 — Measures Table
+- Created a central measures table for DAX governance and organization
+- Measures grouped by category (Sales, Customers, Comparisons)
 
-### 7. Ajuste de Design do Dashboard
-- Refinamento do layout após a criação das medidas
-- Alinhamento de visuais, espaçamento e hierarquia visual revisados
+### Step 7 — Dashboard Design Refinement
+- Refined layout after measure creation
+- Revised visual alignment, spacing, and information hierarchy
 
-### 8. Menu Flutuante
-- Implementação de um **menu de navegação flutuante** com botões de página
-- Melhora significativa na usabilidade e experiência de navegação entre abas
+### Step 8 — Floating Navigation Menu
+- Implemented a **floating navigation menu** with page buttons
+- Significantly improved usability and page-switching experience
 
-### 9. Formatação de Valores das Medidas
-- Formatação dos valores: R$ para moeda, % para percentuais, separadores de milhar
-- Unidades abreviadas (K, M) para grandes valores nos visuais de cartão
+### Step 9 — Measure Value Formatting
+- Formatted values: BRL (R$) for currency, % for percentages, thousand separators
+- Abbreviated units (K, M) for large values on card visuals
 
-### 10. Drill-through
-- Configuração de **drill-through** para permitir análise detalhada por dimensão
-- O usuário pode clicar com o botão direito em qualquer visual e acessar uma página de detalhamento filtrada pelo contexto selecionado
+### Step 10 — Drill-through
+- Configured **drill-through** for detailed analysis by dimension
+- Users can right-click any visual and access a detail page filtered by the selected context
 
-### 11. Ícones e Tooltip Personalizada
-- Adição de ícones para enriquecer a identidade visual e guiar o usuário
-- Criação de uma **tooltip personalizada** com informações adicionais ao passar o mouse sobre os visuais
+### Step 11 — Icons & Custom Tooltip
+- Added icons to enrich the visual identity and guide the user
+- Created a **custom tooltip page** showing additional data on hover
 
-### 12. Publicação
-- Dashboard publicado no **Power BI Service** com link de acesso público
-- Embed disponível via iframe para incorporação em portfólios e sites
-
----
-
-## Dados Brutos
-
-A planilha de dados cobre o período de 2023 a 2025 e contém informações de:
-
-- Data e período das vendas
-- Produtos (aditivos e lubrificantes)
-- Clientes e regiões
-- Valores de faturamento e quantidade
-
-> O arquivo `Sales_2023_2025.xlsx` está disponível na pasta `dados/` para replicação e auditoria.
+### Step 12 — Publishing
+- Dashboard published to **Power BI Service** with a public access link
+- Embed available via iframe for portfolio and website integration
 
 ---
 
-## Como Abrir o Projeto
+## Raw Data
 
-1. Clone este repositório:
+The dataset covers 2023 to 2025 and includes:
+
+- Sale date and period
+- Products (additives and lubricants)
+- Customers and regions
+- Revenue and quantity figures
+
+> The `Sales_2023_2025.xlsx` file is available in the `data/` folder for replication and audit.
+
+---
+
+## How to Open
+
+1. Clone this repository:
    ```bash
    git clone https://github.com/douglaspiangers/sales-dashboard-powerbi.git
    ```
-2. Abra o arquivo `salesdashboard.pbix` no **Power BI Desktop**
-3. Caso necessário, atualize o caminho da fonte de dados apontando para `dados/Sales_2023_2025.xlsx`
+2. Open `salesdashboard.pbix` in **Power BI Desktop**
+3. If needed, update the data source path to point to `data/Sales_2023_2025.xlsx`
 
 ---
 
-## Autor
+## Author
 
 **Douglas Mengue**  
 Data Analyst | Power BI | SQL | Python  
