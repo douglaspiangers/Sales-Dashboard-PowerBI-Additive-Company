@@ -113,7 +113,7 @@ A planilha de dados cobre o período de 2023 a 2025 e contém informações de:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sales-dashboard-powerbi.git
+   git clone https://github.com/douglasmengue/sales-dashboard-powerbi.git
    ```
 2. Abra o arquivo `salesdashboard.pbix` no **Power BI Desktop**
 3. Caso necessário, atualize o caminho da fonte de dados apontando para `dados/Sales_2023_2025.xlsx`
@@ -124,4 +124,4 @@ A planilha de dados cobre o período de 2023 a 2025 e contém informações de:
 
 **Douglas Mengue**  
 Data Analyst | Power BI | SQL | Python  
-[LinkedIn](https://linkedin.com/in/douglas-mengue) · [GitHub](https://github.com/douglas-mengue)
+[LinkedIn](https://linkedin.com/in/douglasmengue) · [GitHub](https://github.com/douglasmengue)
